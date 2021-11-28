@@ -1,0 +1,9 @@
+0: 0
+1: 120
+2: 720
+3: 135
+4: 25
+5: 0
+6: 0
+
+After running 1000 iterations and counting the number of hops it takes to reach a target server, we can conclude that it most commonly takes about 2 hops to get to the destination server. This is because of how routing is implemented: each server has a leaf-set of nearby neighbors and then a routing table that contains servers that are significantly further away when compared to the leaf-set. Since we only have a small pool of server, and since we are only working with 4-digit quaternary numbers, it only takes about 2 hops to get to the destination server. If we had much bigger IDs, it would take more hops on average to get to the destination server. This behavior is correct and is verified by reading the research paper on the Pastry protocol.
